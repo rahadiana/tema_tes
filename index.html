@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Resmi Pemerintah Kota Bekasi</title>
+    <meta name="description" content="Portal resmi Pemerintah Kota Bekasi - Informasi pelayanan publik, berita terkini, dan layanan online">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div class="logo-section">
+                    <img src="images/logo-bekasi.png" alt="Logo Kota Bekasi" class="logo" width="60" height="60">
+                    <div class="site-title">
+                        <h1>Pemerintah Kota Bekasi</h1>
+                        <p>Portal Resmi</p>
+                    </div>
+                </div>
+                <div class="header-info">
+                    <div class="weather">
+                        <span class="temp">28°C</span>
+                        <span class="condition">Cerah</span>
+                    </div>
+                    <div class="date-time">
+                        <span class="date" id="current-date"></span>
+                        <span class="time" id="current-time"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <nav class="main-nav">
+                <ul class="nav-menu">
+                    <li><a href="#beranda" class="active">Beranda</a></li>
+                    <li class="dropdown">
+                        <a href="#profil">Profil <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#sejarah">Sejarah</a></li>
+                            <li><a href="#visi-misi">Visi & Misi</a></li>
+                            <li><a href="#geografis">Geografis</a></li>
+                            <li><a href="#demografi">Demografi</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#pemerintahan">Pemerintahan <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#walikota">Walikota</a></li>
+                            <li><a href="#wakil-walikota">Wakil Walikota</a></li>
+                            <li><a href="#sekda">Sekretaris Daerah</a></li>
+                            <li><a href="#opd">OPD</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#layanan">Layanan <span class="dropdown-arrow">▼</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#layanan-online">Layanan Online</a></li>
+                            <li><a href="#perizinan">Perizinan</a></li>
+                            <li><a href="#pengaduan">Pengaduan</a></li>
+                            <li><a href="#informasi-publik">Informasi Publik</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#berita">Berita</a></li>
+                    <li><a href="#galeri">Galeri</a></li>
+                    <li><a href="#kontak">Kontak</a></li>
+                </ul>
+                <div class="mobile-menu-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="slide active">
+                <img src="images/hero-1.jpg" alt="Kota Bekasi">
+                <div class="slide-content">
+                    <div class="container">
+                        <h2>Selamat Datang di Portal Resmi Kota Bekasi</h2>
+                        <p>Kota Bekasi terus berkomitmen memberikan pelayanan terbaik untuk masyarakat dengan inovasi dan transparansi</p>
+                        <a href="#layanan" class="btn btn-primary">Layanan Online</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/hero-2.jpg" alt="Pembangunan Bekasi">
+                <div class="slide-content">
+                    <div class="container">
+                        <h2>Pembangunan Berkelanjutan</h2>
+                        <p>Membangun Bekasi yang lebih maju, modern, dan berkelanjutan untuk kesejahteraan masyarakat</p>
+                        <a href="#berita" class="btn btn-primary">Baca Berita</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="images/hero-3.jpg" alt="Smart City Bekasi">
+                <div class="slide-content">
+                    <div class="container">
+                        <h2>Smart City Bekasi</h2>
+                        <p>Transformasi digital untuk pelayanan publik yang lebih efisien dan transparan</p>
+                        <a href="#layanan" class="btn btn-primary">Jelajahi Layanan</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-controls">
+            <button class="prev-slide">‹</button>
+            <button class="next-slide">›</button>
+        </div>
+        <div class="slide-indicators">
+            <span class="indicator active"></span>
+            <span class="indicator"></span>
+            <span class="indicator"></span>
+        </div>
+    </section>
+
+    <!-- Quick Access -->
+    <section class="quick-access">
+        <div class="container">
+            <h2 class="section-title">Akses Cepat</h2>
+            <div class="quick-access-grid">
+                <a href="#perizinan" class="quick-item">
+                    <div class="quick-icon">📋</div>
+                    <h3>Perizinan Online</h3>
+                    <p>Layanan perizinan online untuk kemudahan masyarakat</p>
+                </a>
+                <a href="#pengaduan" class="quick-item">
+                    <div class="quick-icon">📢</div>
+                    <h3>Pengaduan Masyarakat</h3>
+                    <p>Sampaikan aspirasi dan keluhan Anda</p>
+                </a>
+                <a href="#informasi-publik" class="quick-item">
+                    <div class="quick-icon">📊</div>
+                    <h3>Informasi Publik</h3>
+                    <p>Akses informasi publik sesuai UU KIP</p>
+                </a>
+                <a href="#ppid" class="quick-item">
+                    <div class="quick-icon">📁</div>
+                    <h3>PPID</h3>
+                    <p>Pejabat Pengelola Informasi dan Dokumentasi</p>
+                </a>
+                <a href="#e-budgeting" class="quick-item">
+                    <div class="quick-icon">💰</div>
+                    <h3>E-Budgeting</h3>
+                    <p>Transparansi anggaran daerah</p>
+                </a>
+                <a href="#e-purchasing" class="quick-item">
+                    <div class="quick-icon">🛒</div>
+                    <h3>E-Purchasing</h3>
+                    <p>Sistem pengadaan barang/jasa elektronik</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section class="news-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Berita & Pengumuman</h2>
+                <a href="#semua-berita" class="btn btn-outline">Lihat Semua</a>
+            </div>
+            <div class="news-grid">
+                <article class="news-card featured">
+                    <img src="images/news-1.jpg" alt="Berita Utama">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date">15 Januari 2024</span>
+                            <span class="category">Pembangunan</span>
+                        </div>
+                        <h3>Walikota Bekasi Resmikan Jembatan Layang Kalimalang</h3>
+                        <p>Pembangunan infrastruktur jembatan layang Kalimalang resmi diselesaikan dan diresmikan langsung oleh Walikota Bekasi untuk melancarkan arus lalu lintas...</p>
+                        <a href="#berita-detail" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="images/news-2.jpg" alt="Berita">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date">14 Januari 2024</span>
+                            <span class="category">Kesehatan</span>
+                        </div>
+                        <h3>Program Vaksinasi COVID-19 Dosis Booster Diperluas</h3>
+                        <p>Pemerintah Kota Bekasi memperluas program vaksinasi COVID-19 dosis booster untuk seluruh warga...</p>
+                        <a href="#berita-detail" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="images/news-3.jpg" alt="Berita">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date">13 Januari 2024</span>
+                            <span class="category">Pendidikan</span>
+                        </div>
+                        <h3>Beasiswa Pendidikan untuk Siswa Berprestasi</h3>
+                        <p>Program beasiswa pendidikan diluncurkan untuk mendukung siswa berprestasi melanjutkan pendidikan...</p>
+                        <a href="#berita-detail" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </article>
+                <article class="news-card">
+                    <img src="images/news-4.jpg" alt="Berita">
+                    <div class="news-content">
+                        <div class="news-meta">
+                            <span class="date">12 Januari 2024</span>
+                            <span class="category">Lingkungan</span>
+                        </div>
+                        <h3>Gerakan Tanam Pohon di Taman Kota Bekasi</h3>
+                        <p>Kegiatan tanam pohon massal dilaksanakan untuk meningkatkan kualitas udara dan lingkungan kota...</p>
+                        <a href="#berita-detail" class="read-more">Baca Selengkapnya</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="statistics">
+        <div class="container">
+            <h2 class="section-title">Data Kota Bekasi</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number" data-target="2800000">0</div>
+                    <div class="stat-label">Jumlah Penduduk</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="210">0</div>
+                    <div class="stat-label">Kelurahan</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="12">0</div>
+                    <div class="stat-label">Kecamatan</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" data-target="45">0</div>
+                    <div class="stat-label">OPD</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Layanan Unggulan</h2>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">🏥</div>
+                    <h3>Kesehatan</h3>
+                    <ul>
+                        <li>BPJS Kesehatan</li>
+                        <li>Kartu Sehat Bekasi</li>
+                        <li>Puskesmas Online</li>
+                        <li>Ambulance Gratis</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🎓</div>
+                    <h3>Pendidikan</h3>
+                    <ul>
+                        <li>Sekolah Gratis</li>
+                        <li>Beasiswa Prestasi</li>
+                        <li>Program Digitalisasi</li>
+                        <li>Bantuan Siswa</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">💼</div>
+                    <h3>Ekonomi</h3>
+                    <ul>
+                        <li>UMKM Center</li>
+                        <li>Pelatihan Kerja</li>
+                        <li>Job Fair</li>
+                        <li>Investasi Daerah</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">🏘️</div>
+                    <h3>Sosial</h3>
+                    <ul>
+                        <li>Bantuan Sosial</li>
+                        <li>Program PKH</li>
+                        <li>Kartu Sembako</li>
+                        <li>Rumah Layak Huni</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="images/logo-bekasi.png" alt="Logo Kota Bekasi" width="50" height="50">
+                        <div>
+                            <h3>Pemerintah Kota Bekasi</h3>
+                            <p>Melayani dengan Hati</p>
+                        </div>
+                    </div>
+                    <p>Portal resmi Pemerintah Kota Bekasi yang menyediakan informasi dan layanan publik untuk masyarakat.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">📘 Facebook</a>
+                        <a href="#" class="social-link">🐦 Twitter</a>
+                        <a href="#" class="social-link">📸 Instagram</a>
+                        <a href="#" class="social-link">📺 YouTube</a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Layanan</h4>
+                    <ul>
+                        <li><a href="#perizinan">Perizinan Online</a></li>
+                        <li><a href="#pengaduan">Pengaduan</a></li>
+                        <li><a href="#informasi">Informasi Publik</a></li>
+                        <li><a href="#ppid">PPID</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Informasi</h4>
+                    <ul>
+                        <li><a href="#profil">Profil Kota</a></li>
+                        <li><a href="#pemerintahan">Pemerintahan</a></li>
+                        <li><a href="#berita">Berita</a></li>
+                        <li><a href="#galeri">Galeri</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Kontak</h4>
+                    <div class="contact-info">
+                        <p>📍 Jl. Ir. H. Juanda No. 1, Bekasi 17111</p>
+                        <p>📞 (021) 8841234</p>
+                        <p>✉️ info@bekasikota.go.id</p>
+                        <p>🌐 www.bekasikota.go.id</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 Pemerintah Kota Bekasi. Hak Cipta Dilindungi.</p>
+                    <div class="footer-links">
+                        <a href="#privacy">Kebijakan Privasi</a>
+                        <a href="#terms">Syarat & Ketentuan</a>
+                        <a href="#sitemap">Peta Situs</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

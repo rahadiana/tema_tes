@@ -1,0 +1,15 @@
+<svg width="1200" height="600" viewBox="0 0 1200 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="heroGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#d97706;stop-opacity:0.6" />
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="600" fill="#fbbf24"/>
+  <rect width="1200" height="600" fill="url(#heroGrad3)"/>
+  <rect x="150" y="120" width="350" height="200" fill="white" opacity="0.1" rx="10"/>
+  <rect x="650" y="180" width="450" height="160" fill="white" opacity="0.1" rx="10"/>
+  <rect x="300" y="370" width="280" height="130" fill="white" opacity="0.1" rx="10"/>
+  <text x="600" y="320" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white" text-anchor="middle" opacity="0.9">Smart City Bekasi</text>
+  <text x="600" y="350" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle" opacity="0.8">Transformasi Digital untuk Pelayanan Publik</text>
+</svg>

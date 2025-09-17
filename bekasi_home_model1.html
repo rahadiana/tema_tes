@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kota Bekasi - Model Simple</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa;}
+    header { background:#007bff; color:white; padding:20px;}
+    nav ul { list-style:none; padding:0; margin:0; display:flex; gap:20px;}
+    nav ul li { display:inline;}
+    nav ul li a { color:white; text-decoration:none; font-weight:bold;}
+    main { padding:30px 10vw;}
+    .widget { background:white; border-radius:8px; box-shadow:0 2px 8px #0001; margin-bottom:20px; padding:20px;}
+    .widget-title { font-size:1.2em; margin-bottom:10px;}
+    .footer { background:#343a40; color:#fff; padding:15px; text-align:center;}
+    .berita-list { padding:0; list-style:none;}
+    .berita-list li { margin-bottom:8px; }
+    .layanan-list { display:flex; gap:15px; flex-wrap:wrap;}
+    .layanan-item { background:#e9ecef; padding:10px 20px; border-radius:5px;}
+    .iframe-placeholder { background:#eee; border:2px dashed #bbb; padding:20px; text-align:center;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portal Kota Bekasi</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Profil Kota</a></li>
+        <li><a href="#">Berita</a></li>
+        <li><a href="#">Layanan Publik</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="widget">
+      <div class="widget-title">Cuaca Kota Bekasi</div>
+      <!-- Widget eksternal: placeholder iframe -->
+      <div class="iframe-placeholder">[Widget Cuaca Eksternal]</div>
+    </section>
+    <section class="widget">
+      <div class="widget-title">Berita Terbaru</div>
+      <ul class="berita-list">
+        <li><strong>Pembangunan Flyover Baru Dimulai</strong> <br><span>17 Sep 2025</span></li>
+        <li><strong>Festival Kuliner Bekasi 2025</strong> <br><span>16 Sep 2025</span></li>
+        <li><strong>Pendaftaran Beasiswa Dibuka</strong> <br><span>16 Sep 2025</span></li>
+      </ul>
+    </section>
+    <section class="widget">
+      <div class="widget-title">Layanan Publik</div>
+      <div class="layanan-list">
+        <div class="layanan-item">e-KTP Online</div>
+        <div class="layanan-item">Perizinan Usaha</div>
+        <div class="layanan-item">Pajak Daerah</div>
+        <div class="layanan-item">PPID</div>
+      </div>
+    </section>
+    <section class="widget">
+      <div class="widget-title">Info & Pengumuman</div>
+      <p>Pemadaman listrik terjadwal tanggal 20-21 September 2025.</p>
+    </section>
+    <section class="widget">
+      <div class="widget-title">Widget Eksternal</div>
+      <!-- Widget eksternal: placeholder iframe -->
+      <div class="iframe-placeholder">[Widget Jadwal Sholat Eksternal]</div>
+    </section>
+  </main>
+  <div class="footer">
+    &copy; 2025 Portal Kota Bekasi | contact@bekasikota.go.id
+  </div>
+</body>
+</html>

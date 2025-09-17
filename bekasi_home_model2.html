@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kota Bekasi - Model Interaktif</title>
+  <style>
+    body { font-family: 'Segoe UI', Arial, sans-serif; margin:0; padding:0; background:#f3f6fa;}
+    header { background:linear-gradient(90deg, #02a9f7 60%, #02577a); color:white; padding:28px 0 16px 0;}
+    header h1 { margin:0 0 8px 40px; }
+    nav { margin-left:40px;}
+    nav ul { list-style:none; display:flex; gap:28px; padding:0; margin:0;}
+    nav ul li a { color:white; text-decoration:none; font-weight:500; font-size:1em;}
+    main { padding:40px 4vw;}
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(330px,1fr)); gap:30px;}
+    .card { background:white; border-radius:14px; box-shadow:0 2px 12px #0002; padding:28px 20px; transition:box-shadow 0.2s;}
+    .card:hover { box-shadow:0 4px 24px #02577a22;}
+    .card-title { font-size:1.18em; margin-bottom:10px; color:#02577a;}
+    .berita-list { padding:0; list-style:none;}
+    .berita-list li { margin-bottom:12px; }
+    .layanan-list { display:flex; gap:12px; flex-wrap:wrap;}
+    .layanan-item { background:#e5f6fe; color:#02577a; padding:12px 28px; border-radius:8px; font-weight:500; cursor:pointer; transition:background 0.2s;}
+    .layanan-item:hover { background:#02a9f7; color:white;}
+    .iframe-placeholder { background:#e0e6ec; border:2px dashed #9ca3af; padding:24px; text-align:center; border-radius:8px;}
+    .footer { background:#02577a; color:#fff; padding:18px; text-align:center; font-size:0.97em;}
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portal Kota Bekasi</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Beranda</a></li>
+        <li><a href="#">Profil Kota</a></li>
+        <li><a href="#">Berita</a></li>
+        <li><a href="#">Layanan Publik</a></li>
+        <li><a href="#">Kontak</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <div class="grid">
+      <div class="card">
+        <div class="card-title">Cuaca Kota Bekasi</div>
+        <!-- Widget eksternal: placeholder iframe -->
+        <div class="iframe-placeholder">[Widget Cuaca Eksternal]</div>
+      </div>
+      <div class="card">
+        <div class="card-title">Berita Terbaru</div>
+        <ul class="berita-list">
+          <li><strong>Pembangunan Flyover Baru Dimulai</strong> <br><span>17 Sep 2025</span></li>
+          <li><strong>Festival Kuliner Bekasi 2025</strong> <br><span>16 Sep 2025</span></li>
+          <li><strong>Pendaftaran Beasiswa Dibuka</strong> <br><span>16 Sep 2025</span></li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-title">Layanan Publik</div>
+        <div class="layanan-list">
+          <div class="layanan-item">e-KTP Online</div>
+          <div class="layanan-item">Perizinan Usaha</div>
+          <div class="layanan-item">Pajak Daerah</div>
+          <div class="layanan-item">PPID</div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-title">Info & Pengumuman</div>
+        <p>Pemadaman listrik terjadwal tanggal 20-21 September 2025.</p>
+      </div>
+      <div class="card">
+        <div class="card-title">Widget Eksternal</div>
+        <!-- Widget eksternal: placeholder iframe -->
+        <div class="iframe-placeholder">[Widget Jadwal Sholat Eksternal]</div>
+      </div>
+    </div>
+  </main>
+  <div class="footer">
+    &copy; 2025 Portal Kota Bekasi | contact@bekasikota.go.id
+  </div>
+</body>
+</html>

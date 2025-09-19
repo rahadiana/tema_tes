@@ -1,74 +1,245 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Kota Bekasi - Model Simple</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f8f9fa;}
-    header { background:#007bff; color:white; padding:20px;}
-    nav ul { list-style:none; padding:0; margin:0; display:flex; gap:20px;}
-    nav ul li { display:inline;}
-    nav ul li a { color:white; text-decoration:none; font-weight:bold;}
-    main { padding:30px 10vw;}
-    .widget { background:white; border-radius:8px; box-shadow:0 2px 8px #0001; margin-bottom:20px; padding:20px;}
-    .widget-title { font-size:1.2em; margin-bottom:10px;}
-    .footer { background:#343a40; color:#fff; padding:15px; text-align:center;}
-    .berita-list { padding:0; list-style:none;}
-    .berita-list li { margin-bottom:8px; }
-    .layanan-list { display:flex; gap:15px; flex-wrap:wrap;}
-    .layanan-item { background:#e9ecef; padding:10px 20px; border-radius:5px;}
-    .iframe-placeholder { background:#eee; border:2px dashed #bbb; padding:20px; text-align:center;}
-  </style>
+  <title>Portal Kota Bekasi - Simple & Clean</title>
+  <meta name="description" content="Portal resmi Pemerintah Kota Bekasi dengan desain sederhana dan mudah digunakan">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
 </head>
-<body>
-  <header>
-    <h1>Portal Kota Bekasi</h1>
-    <nav>
-      <ul>
-        <li><a href="#">Beranda</a></li>
-        <li><a href="#">Profil Kota</a></li>
-        <li><a href="#">Berita</a></li>
-        <li><a href="#">Layanan Publik</a></li>
-        <li><a href="#">Kontak</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section class="widget">
-      <div class="widget-title">Cuaca Kota Bekasi</div>
-      <!-- Widget eksternal: placeholder iframe -->
-      <div class="iframe-placeholder">[Widget Cuaca Eksternal]</div>
-    </section>
-    <section class="widget">
-      <div class="widget-title">Berita Terbaru</div>
-      <ul class="berita-list">
-        <li><strong>Pembangunan Flyover Baru Dimulai</strong> <br><span>17 Sep 2025</span></li>
-        <li><strong>Festival Kuliner Bekasi 2025</strong> <br><span>16 Sep 2025</span></li>
-        <li><strong>Pendaftaran Beasiswa Dibuka</strong> <br><span>16 Sep 2025</span></li>
-      </ul>
-    </section>
-    <section class="widget">
-      <div class="widget-title">Layanan Publik</div>
-      <div class="layanan-list">
-        <div class="layanan-item">e-KTP Online</div>
-        <div class="layanan-item">Perizinan Usaha</div>
-        <div class="layanan-item">Pajak Daerah</div>
-        <div class="layanan-item">PPID</div>
+<body class="bg-gray-50 font-inter antialiased min-h-screen flex flex-col">
+  <!-- Simple Header -->
+  <header class="bg-gradient-to-r from-blue-600 to-blue-700 text-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="py-6">
+        <div class="flex items-center justify-between mb-4">
+          <div class="flex items-center space-x-3">
+            <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-md">
+              <span class="text-blue-600 font-bold text-lg">BK</span>
+            </div>
+            <div>
+              <h1 class="text-2xl font-bold">Portal Kota Bekasi</h1>
+              <p class="text-blue-100 text-sm">Tema Simple & Clean</p>
+            </div>
+          </div>
+          
+          <!-- Mobile Menu Button -->
+          <button class="md:hidden text-white p-2 rounded-md hover:bg-white hover:bg-opacity-10 transition-colors" id="mobile-menu-btn">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+          </button>
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:block" id="main-nav">
+          <ul class="flex space-x-8">
+            <li><a href="#" class="text-white hover:text-blue-200 font-medium transition-colors duration-200 py-2 border-b-2 border-white border-opacity-0 hover:border-opacity-100">Beranda</a></li>
+            <li><a href="#" class="text-white hover:text-blue-200 font-medium transition-colors duration-200 py-2">Profil Kota</a></li>
+            <li><a href="#" class="text-white hover:text-blue-200 font-medium transition-colors duration-200 py-2">Berita</a></li>
+            <li><a href="#" class="text-white hover:text-blue-200 font-medium transition-colors duration-200 py-2">Layanan Publik</a></li>
+            <li><a href="#" class="text-white hover:text-blue-200 font-medium transition-colors duration-200 py-2">Kontak</a></li>
+          </ul>
+        </nav>
+
+        <!-- Mobile Navigation -->
+        <nav class="md:hidden mt-4 hidden" id="mobile-nav">
+          <ul class="space-y-2">
+            <li><a href="#" class="block text-white py-3 px-4 rounded-md bg-white bg-opacity-10">Beranda</a></li>
+            <li><a href="#" class="block text-white py-3 px-4 rounded-md hover:bg-white hover:bg-opacity-10 transition-colors">Profil Kota</a></li>
+            <li><a href="#" class="block text-white py-3 px-4 rounded-md hover:bg-white hover:bg-opacity-10 transition-colors">Berita</a></li>
+            <li><a href="#" class="block text-white py-3 px-4 rounded-md hover:bg-white hover:bg-opacity-10 transition-colors">Layanan Publik</a></li>
+            <li><a href="#" class="block text-white py-3 px-4 rounded-md hover:bg-white hover:bg-opacity-10 transition-colors">Kontak</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-    <section class="widget">
-      <div class="widget-title">Info & Pengumuman</div>
-      <p>Pemadaman listrik terjadwal tanggal 20-21 September 2025.</p>
-    </section>
-    <section class="widget">
-      <div class="widget-title">Widget Eksternal</div>
-      <!-- Widget eksternal: placeholder iframe -->
-      <div class="iframe-placeholder">[Widget Jadwal Sholat Eksternal]</div>
-    </section>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="flex-1 py-8">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Left Column -->
+        <div class="space-y-8">
+          <!-- Weather Widget -->
+          <section class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold text-gray-900">Cuaca Kota Bekasi</h2>
+            </div>
+            <div class="bg-gradient-to-br from-blue-50 to-indigo-50 border-2 border-dashed border-blue-200 rounded-lg p-8 text-center">
+              <div class="text-blue-600 mb-2">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"/>
+                </svg>
+              </div>
+              <p class="text-gray-600 font-medium">Widget Cuaca Eksternal</p>
+              <p class="text-sm text-gray-500 mt-1">Informasi cuaca real-time akan ditampilkan di sini</p>
+            </div>
+          </section>
+
+          <!-- News Section -->
+          <section class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold text-gray-900">Berita Terbaru</h2>
+            </div>
+            <div class="space-y-4">
+              <article class="border-l-4 border-l-green-500 pl-4 py-2">
+                <h3 class="font-semibold text-gray-900 mb-1">Pembangunan Flyover Baru Dimulai</h3>
+                <p class="text-sm text-gray-500">17 Sep 2025</p>
+              </article>
+              <article class="border-l-4 border-l-blue-500 pl-4 py-2">
+                <h3 class="font-semibold text-gray-900 mb-1">Festival Kuliner Bekasi 2025</h3>
+                <p class="text-sm text-gray-500">16 Sep 2025</p>
+              </article>
+              <article class="border-l-4 border-l-purple-500 pl-4 py-2">
+                <h3 class="font-semibold text-gray-900 mb-1">Pendaftaran Beasiswa Dibuka</h3>
+                <p class="text-sm text-gray-500">16 Sep 2025</p>
+              </article>
+            </div>
+            <div class="mt-6">
+              <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium text-sm transition-colors">
+                Lihat semua berita
+                <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <!-- Right Column -->
+        <div class="space-y-8">
+          <!-- Public Services -->
+          <section class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v0a2 2 0 002 2h2m0 0h2a2 2 0 012 2v0a2 2 0 01-2 2H9m0 0v6m0-6V9"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold text-gray-900">Layanan Publik</h2>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <a href="#" class="bg-gray-50 hover:bg-purple-50 hover:border-purple-200 border border-gray-200 rounded-lg p-4 text-center transition-all duration-200 group">
+                <div class="text-purple-600 group-hover:text-purple-700 font-medium text-sm">e-KTP Online</div>
+              </a>
+              <a href="#" class="bg-gray-50 hover:bg-purple-50 hover:border-purple-200 border border-gray-200 rounded-lg p-4 text-center transition-all duration-200 group">
+                <div class="text-purple-600 group-hover:text-purple-700 font-medium text-sm">Perizinan Usaha</div>
+              </a>
+              <a href="#" class="bg-gray-50 hover:bg-purple-50 hover:border-purple-200 border border-gray-200 rounded-lg p-4 text-center transition-all duration-200 group">
+                <div class="text-purple-600 group-hover:text-purple-700 font-medium text-sm">Pajak Daerah</div>
+              </a>
+              <a href="#" class="bg-gray-50 hover:bg-purple-50 hover:border-purple-200 border border-gray-200 rounded-lg p-4 text-center transition-all duration-200 group">
+                <div class="text-purple-600 group-hover:text-purple-700 font-medium text-sm">PPID</div>
+              </a>
+            </div>
+          </section>
+
+          <!-- Announcements -->
+          <section class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div class="flex items-center space-x-3 mb-6">
+              <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M18.432 5.318l-1.75 11.375A1 1 0 0115.692 18H4.308a1 1 0 01-.99-1.125L5.068 5.318A1 1 0 016.057 4.5h1.886a2.5 2.5 0 014.114 0h1.886a1 1 0 01.989.818zM12.5 7a.5.5 0 00-1 0v1.5h-1.5a.5.5 0 000 1H11.5V11a.5.5 0 001 0V9.5H14a.5.5 0 000-1h-1.5V7z"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold text-gray-900">Info & Pengumuman</h2>
+            </div>
+            <div class="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <div class="flex items-start space-x-3">
+                <div class="w-2 h-2 bg-yellow-500 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <p class="text-gray-900 font-medium">Pemadaman listrik terjadwal</p>
+                  <p class="text-sm text-gray-600 mt-1">Tanggal 20-21 September 2025 untuk pemeliharaan jaringan listrik</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- External Widget -->
+          <section class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+            <div class="flex items-center space-x-3 mb-4">
+              <div class="w-10 h-10 bg-indigo-100 rounded-full flex items-center justify-center">
+                <svg class="w-5 h-5 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <h2 class="text-xl font-semibold text-gray-900">Widget Eksternal</h2>
+            </div>
+            <div class="bg-gradient-to-br from-indigo-50 to-purple-50 border-2 border-dashed border-indigo-200 rounded-lg p-8 text-center">
+              <div class="text-indigo-600 mb-2">
+                <svg class="w-12 h-12 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+              </div>
+              <p class="text-gray-600 font-medium">Widget Jadwal Sholat Eksternal</p>
+              <p class="text-sm text-gray-500 mt-1">Informasi waktu sholat akan ditampilkan di sini</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
   </main>
-  <div class="footer">
-    &copy; 2025 Portal Kota Bekasi | contact@bekasikota.go.id
-  </div>
+
+  <!-- Simple Footer -->
+  <footer class="bg-gray-800 text-white py-8 mt-auto">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+            <span class="text-blue-600 font-bold text-sm">BK</span>
+          </div>
+          <span class="font-semibold">Portal Kota Bekasi</span>
+        </div>
+        <p class="text-gray-300 text-sm mb-4">
+          © 2025 Portal Kota Bekasi | 
+          <a href="mailto:contact@bekasikota.go.id" class="hover:text-white transition-colors">contact@bekasikota.go.id</a>
+        </p>
+        <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
+          <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition-colors">Hubungi Kami</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition-colors">Peta Situs</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for mobile menu -->
+  <script>
+    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+      const mobileNav = document.getElementById('mobile-nav');
+      mobileNav.classList.toggle('hidden');
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+          });
+        }
+      });
+    });
+  </script>
 </body>
 </html>

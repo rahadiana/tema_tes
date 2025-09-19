@@ -1,37 +1,226 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
   <meta charset="UTF-8">
-  <title>List Tema Bekasi Kota</title>
+  <title>Portal Pemerintah Kota Bekasi - Pilihan Tema</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-    body { font-family: Arial, sans-serif; margin:0; padding:0; background:#f7f9fa;}
-    .container { max-width:650px; margin:50px auto; background:#fff; border-radius:12px; box-shadow:0 2px 10px #0001; padding:32px;}
-    h1 { text-align:center; color:#02577a; margin-bottom:24px;}
-    ul { list-style:none; padding:0;}
-    li { margin-bottom:18px; }
-    a { text-decoration:none; color:#007bff; font-size:1.06em; font-weight:bold;}
-    a:hover { color:#02577a;}
-    .desc { color:#444; font-size:0.95em; margin-left:8px; display:block; margin-top:4px;}
-  </style>
+  <meta name="description" content="Portal resmi Pemerintah Kota Bekasi dengan berbagai pilihan tema yang profesional dan accessible">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/tailwind.css">
 </head>
-<body>
-  <div class="container">
-    <h1>Pilihan Tema Portal Kota Bekasi</h1>
-    <ul>
-      <li>
-        <a href="bekasi_home_model1.html" target="_blank">Tema 1: Simple & Clean</a>
-        <span class="desc">Desain bersih, minimalis, mudah diubah</span>
-      </li>
-      <li>
-        <a href="bekasi_home_model2.html" target="_blank">Tema 2: Modern & Interaktif</a>
-        <span class="desc">Desain modern, grid, interaktif, card</span>
-      </li>
-      <li>
-        <a href="bekasi_home_redesign.html" target="_blank">Tema 3: Redesign Berbasis Konten Eksisting</a>
-        <span class="desc">Struktur dan isi mengikuti portal eksisting (tanpa fitur baru), tampilan diperbarui</span>
-      </li>
-    </ul>
-  </div>
+<body class="bg-gray-50 font-inter antialiased">
+  <!-- Header with Government Branding -->
+  <header class="gov-header py-6 shadow-lg">
+    <div class="gov-container">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center space-x-4">
+          <div class="w-12 h-12 bg-white rounded-lg flex items-center justify-center shadow-md">
+            <span class="text-bekasi-primary font-bold text-lg">BK</span>
+          </div>
+          <div>
+            <h1 class="text-xl font-bold text-white">Pemerintah Kota Bekasi</h1>
+            <p class="text-blue-100 text-sm">Portal Resmi Pelayanan Publik</p>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-2 text-blue-100 text-sm">
+          <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+          </svg>
+          <span>Kota Bekasi, Jawa Barat</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="py-12">
+    <div class="gov-container">
+      <!-- Page Title Section -->
+      <div class="text-center mb-12">
+        <h2 class="gov-heading-1 text-gray-900 mb-4">Pilihan Tema Portal Resmi</h2>
+        <p class="gov-text text-lg max-w-2xl mx-auto">
+          Pilih tema yang sesuai dengan kebutuhan tampilan portal pemerintah Kota Bekasi. 
+          Setiap tema dirancang dengan standar aksesibilitas dan profesionalisme tinggi.
+        </p>
+      </div>
+
+      <!-- Theme Cards Grid -->
+      <div class="gov-grid-3 max-w-4xl mx-auto">
+        <!-- Theme 1: Simple & Clean -->
+        <div class="gov-card p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-green-500">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <span class="gov-badge bg-green-600">Sederhana</span>
+          </div>
+          
+          <h3 class="gov-heading-3 mb-3 text-gray-900">Tema 1: Simple & Clean</h3>
+          <p class="gov-text-sm mb-6 leading-relaxed">
+            Desain bersih dan minimalis yang mudah diubah dan dikelola. 
+            Cocok untuk portal dengan fokus pada keterbacaan dan kemudahan navigasi.
+          </p>
+          
+          <div class="flex flex-col space-y-3">
+            <a href="bekasi_home_model1.html" 
+               target="_blank" 
+               class="gov-button text-center justify-center bg-green-600 hover:bg-green-700">
+              Lihat Tema
+            </a>
+            <div class="flex flex-wrap gap-2">
+              <span class="gov-tag">Minimalis</span>
+              <span class="gov-tag">Mudah Dikelola</span>
+              <span class="gov-tag">Ringan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme 2: Modern & Interactive -->
+        <div class="gov-card p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-blue-500">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+              </svg>
+            </div>
+            <span class="gov-badge bg-blue-600">Modern</span>
+          </div>
+          
+          <h3 class="gov-heading-3 mb-3 text-gray-900">Tema 2: Modern & Interaktif</h3>
+          <p class="gov-text-sm mb-6 leading-relaxed">
+            Desain modern dengan elemen interaktif, grid layout, dan card components. 
+            Ideal untuk portal dengan banyak konten dan fitur multimedia.
+          </p>
+          
+          <div class="flex flex-col space-y-3">
+            <a href="bekasi_home_model2.html" 
+               target="_blank" 
+               class="gov-button text-center justify-center bg-blue-600 hover:bg-blue-700">
+              Lihat Tema
+            </a>
+            <div class="flex flex-wrap gap-2">
+              <span class="gov-tag">Interaktif</span>
+              <span class="gov-tag">Grid Layout</span>
+              <span class="gov-tag">Card Design</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Theme 3: Redesign with Tailwind -->
+        <div class="gov-card p-6 hover:shadow-xl transition-all duration-300 border-l-4 border-l-bekasi-primary relative overflow-hidden">
+          <!-- Recommendation Badge -->
+          <div class="absolute top-0 right-0 bg-gradient-to-l from-bekasi-accent to-bekasi-primary text-white px-3 py-1 text-xs font-medium rounded-bl-lg">
+            Direkomendasikan
+          </div>
+          
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 bg-bekasi-primary bg-opacity-10 rounded-lg flex items-center justify-center">
+              <svg class="w-6 h-6 text-bekasi-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
+              </svg>
+            </div>
+            <span class="gov-badge bg-bekasi-primary">Terbaru</span>
+          </div>
+          
+          <h3 class="gov-heading-3 mb-3 text-gray-900">Tema 3: Government Professional</h3>
+          <p class="gov-text-sm mb-6 leading-relaxed">
+            Redesign dengan Tailwind CSS dan standar pemerintahan Indonesia. 
+            Mengutamakan aksesibilitas, kepercayaan, dan profesionalisme.
+          </p>
+          
+          <div class="flex flex-col space-y-3">
+            <a href="bekasi_home_redesign.html" 
+               target="_blank" 
+               class="gov-button text-center justify-center bg-bekasi-primary hover:bg-bekasi-dark">
+              Lihat Tema
+            </a>
+            <div class="flex flex-wrap gap-2">
+              <span class="gov-tag">Tailwind CSS</span>
+              <span class="gov-tag">Accessible</span>
+              <span class="gov-tag">Professional</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Features Section -->
+      <div class="mt-16 gov-hero p-8">
+        <div class="text-center mb-8">
+          <h3 class="gov-heading-2 mb-4">Fitur Standar Portal Pemerintah</h3>
+          <p class="gov-text">Semua tema telah dilengkapi dengan fitur-fitur standar untuk portal pemerintah daerah</p>
+        </div>
+        
+        <div class="gov-grid-4">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gov-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gov-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2">Keamanan Data</h4>
+            <p class="gov-text-sm">Standar keamanan tinggi untuk melindungi data warga</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gov-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gov-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2">Aksesibilitas</h4>
+            <p class="gov-text-sm">Desain ramah disabilitas sesuai standar WCAG</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gov-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gov-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2">Responsif</h4>
+            <p class="gov-text-sm">Optimal di semua perangkat mobile dan desktop</p>
+          </div>
+          
+          <div class="text-center">
+            <div class="w-16 h-16 bg-gov-primary bg-opacity-10 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gov-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+            </div>
+            <h4 class="font-semibold text-gray-900 mb-2">Transparan</h4>
+            <p class="gov-text-sm">Informasi publik yang mudah diakses dan dipahami</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="gov-footer py-8 mt-16">
+    <div class="gov-container">
+      <div class="text-center">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
+            <span class="text-bekasi-primary font-bold text-sm">BK</span>
+          </div>
+          <span class="text-white font-semibold">Pemerintah Kota Bekasi</span>
+        </div>
+        <p class="text-gray-300 text-sm mb-4">
+          Portal resmi layanan publik Pemerintah Kota Bekasi<br>
+          Jl. Jend. Ahmad Yani, Kota Bekasi, Jawa Barat
+        </p>
+        <div class="flex items-center justify-center space-x-6 text-sm text-gray-400">
+          <span>© 2025 Pemerintah Kota Bekasi</span>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition-colors">Kebijakan Privasi</a>
+          <span>•</span>
+          <a href="#" class="hover:text-white transition-colors">Hubungi Kami</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>

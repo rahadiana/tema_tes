@@ -1,0 +1,15 @@
+{
+  "name": "bekasi-government-portal",
+  "version": "1.0.0",
+  "description": "Portal Resmi Pemerintah Kota Bekasi with Tailwind CSS",
+  "scripts": {
+    "build-css": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.0"
+  },
+  "keywords": ["government", "portal", "bekasi", "tailwind"],
+  "author": "Pemerintah Kota Bekasi",
+  "license": "MIT"
+}

@@ -1,0 +1,134 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Government Portal Components */
+@layer components {
+  .gov-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .gov-card {
+    @apply bg-white rounded-lg shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-200;
+  }
+  
+  .gov-button {
+    @apply inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-gov-primary hover:bg-gov-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gov-primary transition-colors duration-200;
+  }
+  
+  .gov-button-secondary {
+    @apply inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gov-primary transition-colors duration-200;
+  }
+  
+  .gov-heading-1 {
+    @apply text-3xl lg:text-4xl font-bold text-gray-900 leading-tight;
+  }
+  
+  .gov-heading-2 {
+    @apply text-2xl lg:text-3xl font-semibold text-gray-900 leading-tight;
+  }
+  
+  .gov-heading-3 {
+    @apply text-xl lg:text-2xl font-semibold text-gray-800 leading-tight;
+  }
+  
+  .gov-text {
+    @apply text-gray-700 leading-relaxed;
+  }
+  
+  .gov-text-sm {
+    @apply text-sm text-gray-600;
+  }
+  
+  .gov-nav-link {
+    @apply text-white hover:text-gray-200 font-medium transition-colors duration-200;
+  }
+  
+  .gov-topbar {
+    @apply bg-gov-dark text-white text-sm py-2;
+  }
+  
+  .gov-header {
+    @apply bg-gradient-to-r from-bekasi-primary to-bekasi-accent text-white;
+  }
+  
+  .gov-hero {
+    @apply bg-gradient-to-br from-gov-light to-white rounded-lg shadow-sm border border-gray-100;
+  }
+  
+  .gov-badge {
+    @apply inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-gov-primary text-white;
+  }
+  
+  .gov-tag {
+    @apply inline-flex items-center px-2.5 py-1 rounded-md text-xs font-medium bg-gray-100 text-gray-800 hover:bg-gray-200 transition-colors duration-150;
+  }
+  
+  .gov-footer {
+    @apply bg-gray-800 text-white;
+  }
+  
+  .gov-grid {
+    @apply grid gap-6;
+  }
+  
+  .gov-grid-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-6;
+  }
+  
+  .gov-grid-3 {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+  
+  .gov-grid-4 {
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+}
+
+/* Custom Government Utilities */
+@layer utilities {
+  .shadow-gov {
+    box-shadow: 0 4px 6px -1px rgba(30, 58, 138, 0.1), 0 2px 4px -1px rgba(30, 58, 138, 0.06);
+  }
+  
+  .text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gradient-gov {
+    background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+  }
+  
+  .gradient-bekasi {
+    background: linear-gradient(90deg, #02a9f7 60%, #02577a);
+  }
+}
+
+/* Base styles for better government portal appearance */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    @apply bg-gray-50 text-gray-900;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-semibold;
+  }
+  
+  a {
+    @apply text-gov-primary hover:text-gov-secondary transition-colors duration-200;
+  }
+  
+  /* Focus styles for accessibility */
+  button:focus,
+  a:focus,
+  input:focus,
+  select:focus,
+  textarea:focus {
+    @apply outline-none ring-2 ring-gov-primary ring-opacity-50;
+  }
+}
